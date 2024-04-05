@@ -121,7 +121,7 @@ def entangling_layer(nqubits):
     for i in range(1, nqubits - 1, 2):
         qml.CNOT(wires=[i, i + 1])
 
-        @qml.qnode(dev)
+@qml.qnode(dev)
 def quantum_net(q_input_features, q_weights_flat):
 
     q_weights = q_weights_flat.reshape(q_depth, n_qubits)
